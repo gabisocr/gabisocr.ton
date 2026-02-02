@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>gabisocr.me</title>
+
+<style>
+:root{
+--tg-blue:#2AABEE;
+--tg-blue-dark:#229ED9;
+--text:#111;
+--muted:#6b7280;
+--soft:#f3f4f6;
+--border:#e5e7eb;
+--shadow:0 6px 22px rgba(0,0,0,.06);
+--radius:14px;
+--max:980px;
+--press:rgba(42,171,238,.12);
+}
+
+*{box-sizing:border-box}
+body{margin:0;font:16px/1.6 system-ui;background:#fff;color:var(--text)}
+a{text-decoration:none;color:inherit}
+
+/* top */
+.topbar{position:sticky;top:0;background:#fff;border-bottom:1px solid var(--border)}
+.topbar__inner{max-width:var(--max);margin:auto;padding:14px 18px;display:flex;justify-content:space-between;align-items:center}
+.brand{display:flex;gap:10px;align-items:center}
+.brand img{width:26px}
+.brand__title{font-weight:700}
+.pill{font-size:12px;background:var(--soft);border:1px solid var(--border);padding:6px 10px;border-radius:999px;color:var(--muted)}
+
+.wrap{max-width:var(--max);margin:auto;padding:24px 16px}
+
+/* hero */
+.hero{display:grid;grid-template-columns:140px 1fr;gap:20px;border:1px solid var(--border);border-radius:16px;padding:16px;box-shadow:var(--shadow)}
+.avatar{width:140px;height:140px;border-radius:20px;overflow:hidden;border:1px solid var(--border)}
+.avatar img{width:100%;height:100%;object-fit:cover}
+
+.subtitle{color:var(--muted);margin:0 0 10px;max-width:70ch}
+
+.tags{display:flex;gap:8px;flex-wrap:wrap}
+.tag{border:1px solid var(--border);padding:6px 10px;border-radius:999px;font-size:13px;background:#fff}
+.tag b{color:var(--tg-blue-dark)}
+
+.section{margin-top:22px}
+.section__title{font-size:13px;color:var(--muted);text-transform:uppercase}
+
+.cards{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+
+.card{border:1px solid var(--border);border-radius:14px;padding:14px;position:relative;overflow:hidden}
+.card::after{content:"";position:absolute;inset:0;background:var(--press);opacity:0;transition:.12s}
+.card:active::after{opacity:1}
+
+.card__top{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.card__name{font-weight:600}
+.card__desc{color:var(--muted);font-size:14px}
+
+.card__right{display:flex;gap:8px;align-items:center}
+
+.card__badge{
+font-size:12px;
+color:var(--tg-blue-dark);
+border:1px solid rgba(42,171,238,.3);
+padding:4px 8px;
+border-radius:999px;
+background:rgba(42,171,238,.06);
+}
+
+.card__action{
+width:30px;height:30px;
+border-radius:10px;
+border:1px solid rgba(42,171,238,.3);
+display:grid;
+place-items:center;
+color:var(--tg-blue-dark);
+background:rgba(42,171,238,.08);
+}
+.card__action svg{width:18px}
+
+/* NFT */
+.nft{display:flex;gap:10px;margin-top:8px}
+.nft__img{width:72px;height:72px;border-radius:12px;overflow:hidden;border:1px solid var(--border)}
+.nft__img img{width:100%;height:100%;object-fit:cover;filter:contrast(1.08) saturate(1.06)}
+
+.nft__collection{font-size:12px;color:var(--muted);margin:0}
+.nft__description{font-size:13px;color:var(--muted);margin:2px 0;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+
+.attrs{display:flex;gap:6px;flex-wrap:wrap;margin-top:6px}
+.attr{font-size:11px;padding:4px 8px;border-radius:999px;border:1px solid rgba(42,171,238,.25);background:rgba(42,171,238,.06)}
+.attr b{color:var(--tg-blue-dark)}
+
+footer{margin-top:24px;color:var(--muted);font-size:13px}
+
+@media(max-width:720px){
+.hero{grid-template-columns:1fr}
+.cards{grid-template-columns:1fr}
+.avatar{width:100px;height:100px}
+}
+</style>
+</head>
+
+<body>
+
+<header class="topbar">
+<div class="topbar__inner">
+<div class="brand">
+<img src="t_logo.png">
+<div class="brand__title">gabisocr.me</div>
+</div>
+<div class="pill">Personal page</div>
+</div>
+</header>
+
+<main class="wrap">
+
+<section class="hero">
+<div class="avatar"><img src="nft5.jpg"></div>
+
+<div>
+<h2 style="margin:0 0 6px">gabisocr.ton</h2>
+
+<p class="subtitle">
+I’m a developer and programmer. I build products, tools and integrations.<br>
+I actively use <b>The Open Network (TON)</b> ecosystem.
+</p>
+
+<div class="tags">
+<div class="tag"><b>Focus:</b> Web • Bots • Automation</div>
+<div class="tag"><b>Network:</b> TON</div>
+<div class="tag"><b>Contact:</b> <a href="https://t.me/gabisocr" target="_blank">@gabisocr</a></div>
+</div>
+</div>
+</section>
+
+<section class="section">
+<h3 class="section__title">My profiles</h3>
+
+<div class="cards">
+
+<!-- Telegram main -->
+<div class="card">
+<div class="card__top">
+<div class="card__name">Telegram — @gabisocr</div>
+
+<div class="card__right">
+<a class="card__action" href="https://t.me/gabisocr" target="_blank">
+<svg viewBox="0 0 24 24" fill="currentColor">
+<path d="M21 3L3.8 10.1c-1.1.45-1.08 1.08-.2 1.35l4.4 1.37 10.2-6.4c.48-.3.92-.14.56.18L10.5 14l-.3 4.5c.44 0 .64-.2.9-.44l2.2-2.1 4.6 3.4c.85.47 1.45.23 1.66-.79L22 4.1c.3-1.28-.49-1.86-1-1.1Z"/>
+</svg>
+</a>
+<span class="card__badge">Primary</span>
+</div>
+</div>
+<p class="card__desc">My main Telegram account.</p>
+</div>
+
+<!-- NFT Username @konnitsa -->
+<div class="card">
+<div class="card__top">
+<div class="card__name">NFT — @konnitsa</div>
+
+<div class="card__right">
+<a class="card__action" href="https://t.me/konnitsa" target="_blank">
+<svg viewBox="0 0 24 24" fill="currentColor">
+<path d="M21 3L3.8 10.1c-1.1.45-1.08 1.08-.2 1.35l4.4 1.37 10.2-6.4c.48-.3.92-.14.56.18L10.5 14l-.3 4.5c.44 0 .64-.2.9-.44l2.2-2.1 4.6 3.4c.85.47 1.45.23 1.66-.79L22 4.1c.3-1.28-.49-1.86-1-1.1Z"/>
+</svg>
+</a>
+<span class="card__badge">Username</span>
+</div>
+</div>
+
+<div class="nft">
+<div class="nft__img"><img src="nft3.jpg"></div>
+<div>
+<p class="nft__collection">Telegram Usernames</p>
+<p class="nft__description">The @konnitsa username on Telegram.</p>
+
+<div class="attrs">
+<div class="attr"><b>Alias:</b> konnitsa.t.me</div>
+<div class="attr"><b>Alias:</b> t.me/konnitsa</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</section>
+
+<footer>© <span id="y"></span> gabisocr.ton</footer>
+
+</main>
+
+<script>
+document.getElementById("y").textContent=new Date().getFullYear();
+</script>
+
+</body>
+</html>
+
